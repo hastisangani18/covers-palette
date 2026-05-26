@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covers Palette | Personalized Creations Made With Love</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Covers Palette Logo" class="logo-img">
+            <span class="logo-text">Covers Palette</span>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="order.html">Order</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <span id="userInfo"></span>
+<a href="cart.html" class="cart-icon">
+🛒
+</a>
+
+<button
+id="logoutBtn"
+onclick="logout()"
+style="display:none;">
+
+Logout
+
+</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Covers Palette</h1>
+        <h2>Personalized Creations Made With Love ♡</h2>
+        <p>
+            Custom Mobile Covers • Frames • Ring Albums • Memory Albums designed with creativity and high-quality crafting to preserve your special memories forever.
+        </p>
+        <a href="products.html" class="btn">Explore Products</a>
+    </section>
+    <section class="featured">
+    <h2>Our Beautiful Creations</h2>
+    <p>Every piece is uniquely designed and hand-crafted with love.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="images/final-cover.jpeg" alt="Custom Mobile Covers">
+            <h3>Custom Mobile Covers</h3>
+            <p>Personalized custom mobile covers with your chosen memories, rose gold patterns, and aesthetic designs.</p>
+            <h4>Starting ₹299</h4>
+            <a href="products.html" class="btn">View Product</a>
+        </div>
+
+        <div class="card">
+            <img src="images/final-frame.jpeg" alt="Photo Frames">
+            <h3>Photo Frames</h3>
+            <p>Beautiful personalized frames to capture your special memories with aesthetic design.</p>
+            <h4>Starting ₹499</h4>
+            <a href="products.html" class="btn">View Product</a>
+        </div>
+
+        <div class="card">
+            <img src="images/ring-album.jpeg" alt="Ring Album">
+            <h3>Ring Album</h3>
+            <p>Mini handmade ring albums designed with cute memories, photos, and messages.</p>
+            <h4>Starting ₹199</h4>
+            <a href="products.html" class="btn">View Product</a>
+        </div>
+
+        <div class="card">
+            <img src="images/final-magazines.jpeg" alt="Custom Magazine">
+            <h3>Custom Magazine</h3>
+            <p>Full-sized scrapbook magazine packed with creative pop-ups, customized quotes, flaps, and beautiful memories.</p>
+            <h4>Starting ₹450</h4>
+            <a href="products.html" class="btn">View Product</a>
+        </div>
+
+    </div>
+</section>
+    <section class="about-preview">
+        <div class="about-text">
+            <h2>About Covers Palette</h2>
+            <p>
+                Covers Palette is a personalized crafting brand based in India, born out of a passion to turn your digital memories into physical, artistic keepsakes. We create custom mobile covers, frames, ring albums, and memory scrapbooks with high-quality materials and infinite care.
+            </p>
+            <a href="about.html" class="btn">Our Full Story</a>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-container">
+            <div class="review-card">
+                <p>"The custom mobile cover exceeded my expectations! The details are so beautiful and the craft quality is top-notch. Truly made with love 🤍"</p>
+                <h4>- Happy Customer</h4>
+            </div>
+            <div class="review-card">
+                <p>"Bought a personalized memory album for my anniversary, and my partner absolutely loved it. Every page has some creative detail. Highly recommended!"</p>
+                <h4>- Customer</h4>
+            </div>
+            <div class="review-card">
+                <p>"Excellent customer response and safe PAN India delivery. The packaging itself looked like a beautiful gift. Best gifting option for aesthetic designs."</p>
+                <h4>- Customer</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <h2>Why Choose Covers Palette?</h2>
+        <div class="why-box">
+            <div>✨ 100% Handmade With Care</div>
+            <div>🎨 Beautiful Personalized Designs</div>
+            <div>🚚 Safe PAN India Shipping</div>
+            <div>💳 Easy & Secure Payments</div>
+            <div>💌 Custom Packaging for Gifts</div>
+            <div>🤍 Premium Craft Quality</div>
+        </div>
+    </section>
+
+    <section class="instagram">
+        <h2>Follow Our Journey</h2>
+        <p>Discover our latest designs, custom creations, process videos, and daily crafting updates on Instagram!</p>
+        <a href="https://www.instagram.com/covers.palette/" target="_blank" class="btn">Visit Instagram</a>
+    </section>
+
+    <section class="contact-quick">
+        <h2>Place Your Custom Order</h2>
+        <p>Have custom photos or specific ideas? Share them with us directly on WhatsApp to begin creating your masterpiece!</p>
+        <a href="https://wa.me/919825677172?text=Hello!%20I%20am%20interested%20in%20ordering%20a%20personalized%20creation." target="_blank" class="btn">Order on WhatsApp</a>
+    </section>
+
+    <section class="delivery">
+        <h2>Safe Delivery Across India 🇮🇳</h2>
+        <p>
+            We proudly ship our custom creations all over the country. Wherever you reside, your precious memories packaged securely will arrive safely at your doorstep.
+        </p>
+        <div class="delivery-box">
+            <span>📍 PAN India Shipping</span>
+            <span>🚚 Double-Layer Protective Packaging</span>
+            <span>💌 Personalized Gift Cards Included</span>
+        </div>
+    </section>
+
+    <section class="payment">
+        <h2>Easy & Secure Payments</h2>
+        <p>We support various modern digital payment gateways for a secure and hassle-free ordering transaction.</p>
+        <div class="payment-box">
+            <span>💳 UPI Payments (GPay/PhonePe)</span>
+            <span>📱 Online Net Banking</span>
+            <span>🔒 100% Secure Transactions</span>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How can I place an order?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can use our interactive Order form page to build your custom package, or click any WhatsApp button to message us directly with your requirements and photos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How long does crafting and delivery take?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>As every product is fully personalized and handcrafted, crafting takes 3–5 days. Shipping takes another 4–6 days depending on your location in India.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I see a preview before shipping?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! We send high-resolution photos and videos of your finished order before packaging it so you can verify and be 100% satisfied with the outcome.</p>
+            </div>
+        </div>
+    </section>
+
+   <footer class="footer">
+  <h2>Covers Palette</h2>
+  <p>Personalized Creations Made With Love</p>
+
+  <div class="footer-links">
+    <a href="#">Instagram</a>
+    <span>|</span>
+    <a href="#">WhatsApp</a>
+    <span>|</span>
+    <a href="#">Email</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 Covers Palette. PAN India Delivery IN. All rights reserved.
+  </p>
+</footer>
+<script>
+
+const userEmail =
+localStorage.getItem("userEmail");
+
+if(userEmail){
+
+document.getElementById("userInfo")
+.innerText="Hi, Hasti";
+
+document.getElementById("logoutBtn")
+.style.display="inline-block";
+
+}
+
+function logout(){
+
+localStorage.removeItem("userEmail");
+
+window.location.href="login.html";
+
+}
+
+</script>
+</body>
+
+</html>

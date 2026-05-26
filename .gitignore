@@ -1,0 +1,33 @@
+# VS Code
+.vscode/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Java / Spring Boot
+target/
+*.class
+*.jar
+*.war
+
+# Build files
+build/
+
+# IntelliJ
+.idea/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

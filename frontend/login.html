@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body{
+
+margin:0;
+
+font-family:Poppins,sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+background:#f5f0eb;
+
+}
+
+.box{
+
+width:420px;
+
+padding:45px;
+
+background:#fff;
+
+border-radius:25px;
+
+box-shadow:
+
+0 8px 25px rgba(120,90,70,.15);
+
+border:1px solid #e8dcd2;
+
+text-align:center;
+
+}
+
+h2{
+
+color:#7d5a50;
+
+font-size:40px;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+}
+
+p{
+
+color:#9b7b6f;
+
+font-size:16px;
+
+margin-bottom:25px;
+
+}
+
+input{
+
+width:100%;
+
+padding:16px;
+
+margin:12px 0;
+
+border:2px solid #e7ddd5;
+
+border-radius:12px;
+
+font-size:15px;
+
+box-sizing:border-box;
+
+outline:none;
+
+color:#7d5a50;
+
+}
+
+input:focus{
+
+border-color:#c58f63;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+background:#c58f63;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#a97752;
+
+transform:translateY(-2px);
+
+}
+
+.login-text{
+
+margin-top:20px;
+
+font-size:14px;
+
+}
+
+.login-text a{
+
+color:#c58f63;
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+.login-text a:hover{
+
+text-decoration:underline;
+
+}
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Covers Palette</h2>
+
+<p>Welcome back 🤎</p>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+    <p class="login-text">
+
+New here?
+
+<a href="signup.html">
+
+Create Account
+
+</a>
+
+</p>
+</div>
+
+<script>
+async function login(){
+
+    const user = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    };
+
+    const response = await fetch("http://localhost:8080/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    });
+
+    const result = await response.text();
+
+    if(result==="success"){
+
+localStorage.setItem("userEmail", user.email);
+
+alert("Welcome Back 🤎");
+
+window.location.href="index.html";
+
+}
+}
+</script>
+
+</body>
+</html>

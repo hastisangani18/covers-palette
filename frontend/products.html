@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Covers Palette</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Covers Palette Logo" class="logo-img">
+            <span class="logo-text">Covers Palette</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="order.html">Order</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html" class="cart-icon">
+🛒
+</a>
+<span id="userName"></span>
+
+<button
+id="logoutBtn"
+onclick="logout()"
+style="display:none;">
+
+Logout
+
+</button>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Handcrafted Products</h1>
+        <p>Explore our wide collection of personalized gifts, designed and created with love and perfection.</p>
+    </section>
+<section class="featured">
+    <div class="cards">
+
+        <div class="card">
+            <img src="images/final-cover.jpeg" alt="Custom Mobile Covers">
+            <h3>Custom Mobile Covers</h3>
+            <p>Personalized custom mobile covers with your chosen memories, rose gold patterns, and aesthetic designs.</p>
+            <h4>Starting ₹299</h4>
+
+            <a href="https://wa.me/919825677172?text=Hello%20I%20want%20to%20order%20Custom%20Mobile%20Cover" class="btn">Order Now</a>
+
+            <button
+onclick="addToCart(
+'Custom Mobile Covers',
+299,
+'images/final-cover.jpeg'
+)"
+class="cart-btn">
+
+Add To Cart
+
+</button>
+</div>
+
+        <div class="card">
+            <img src="images/final-frame.jpeg" alt="Photo Frames">
+            <h3>Photo Frames</h3>
+            <p>Beautiful personalized frames to capture your special memories with aesthetic design.</p>
+            <h4>Starting ₹499</h4>
+
+            <a href="https://wa.me/919825677172?text=Hello%20I%20want%20to%20order%20Photo%20Frame" class="btn">Order Now</a>
+
+           <button  
+           onclick="addToCart(
+'Photo Frames',
+499,
+'images/final-frame.jpeg'
+)"
+class="cart-btn">
+
+Add to cart 
+</button>
+        </div>
+
+        <div class="card">
+            <img src="images/ring-album.jpeg" alt="Ring Album">
+            <h3>Ring Album</h3>
+            <p>Mini handmade ring albums designed with cute memories, photos, and messages.</p>
+            <h4>Starting ₹199</h4>
+
+            <a href="https://wa.me/919825677172?text=Hello%20I%20want%20to%20order%20Ring%20Album" class="btn">Order Now</a>
+
+            <button 
+            onclick="addToCart(
+'Ring Album',
+699,
+'images/ringalbum.jpeg'
+)"
+ class="cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/final-magazines.jpeg" alt="Custom Magazine">
+            <h3>Custom Magazine</h3>
+            <p>Full-sized scrapbook magazine packed with creative pop-ups, customized quotes, flaps, and beautiful memories.</p>
+            <h4>Starting ₹450</h4>
+
+            <a href="https://wa.me/919825677172?text=Hello%20I%20want%20to%20order%20Custom%20Magazine" class="btn">Order Now</a>
+
+            <button
+            onclick="addToCart(
+'Custom Magazine',
+450,
+'images/final-magazines.jpeg'
+)" class="cart-btn">Add To Cart</button>
+        </div>
+
+    </div>
+</section>
+   <footer class="footer">
+  <h2>Covers Palette</h2>
+  <p>Personalized Creations Made With Love</p>
+
+  <div class="footer-links">
+    <a href="#">Instagram</a>
+    <span>|</span>
+    <a href="#">WhatsApp</a>
+    <span>|</span>
+    <a href="#">Email</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 Covers Palette. PAN India Delivery IN. All rights reserved.
+  </p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | Covers Palette</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Covers Palette Logo" class="logo-img">
+        <span class="logo-text">Covers Palette</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-icon">🛒</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Place Your Order</h1>
+    <p>Fill your details and send your order directly on WhatsApp.</p>
+</section>
+
+<div class="form-container">
+    <form id="orderForm">
+
+        <p id="successMsg"></p>
+
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="customerName" class="form-control" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your WhatsApp Number</label>
+            <input type="tel" id="whatsappNumber" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Delivery City & State</label>
+            <input type="text" id="addressInput" class="form-control" placeholder="Enter your city and state" required>
+        </div>
+
+        <div class="form-group">
+            <label>Customization Theme / Colors</label>
+            <input type="text" id="themeInput" class="form-control" placeholder="Pastel, Brown, Black, Rose Gold etc.">
+        </div>
+
+        <div class="form-group">
+            <label>Special Requests</label>
+            <textarea id="instructions" class="form-control" placeholder="Write your design details..." required></textarea>
+        </div>
+
+        <button type="submit" class="place-order-btn">
+            Send Order on WhatsApp 💬
+        </button>
+
+    </form>
+</div>
+
+<footer class="footer">
+    <h2>Covers Palette</h2>
+    <p>Personalized Creations Made With Love</p>
+
+    <div class="footer-links">
+        <a href="#">Instagram</a>
+        <span>|</span>
+        <a href="#">WhatsApp</a>
+        <span>|</span>
+        <a href="#">Email</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Covers Palette. PAN India Delivery IN. All rights reserved.
+    </p>
+</footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if(cart.length === 0){
+        alert("Your cart is empty 🤎");
+        window.location.href = "products.html";
+        return;
+    }
+
+    const name = document.getElementById("customerName").value;
+    const whatsapp = document.getElementById("whatsappNumber").value;
+    const address = document.getElementById("addressInput").value;
+    const theme = document.getElementById("themeInput").value || "Any beautiful theme";
+    const instructions = document.getElementById("instructions").value;
+
+    let total = 0;
+    let productDetails = "";
+
+    cart.forEach(item => {
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        productDetails += `${item.name} x ${item.quantity} = ₹${itemTotal}\n`;
+    });
+
+    const message =
+`Hello Covers Palette 🤎
+
+I want to place an order.
+
+Name: ${name}
+WhatsApp Number: ${whatsapp}
+Delivery Location: ${address}
+Theme/Colors: ${theme}
+
+Products:
+${productDetails}
+
+Total: ₹${total}
+
+Special Request:
+${instructions}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = "https://wa.me/919825677172?text=" + encodedMessage;
+
+    document.getElementById("successMsg").innerText =
+        "Order ready! Opening WhatsApp... 🤎";
+
+    document.getElementById("successMsg").style.color = "#7b5252";
+    document.getElementById("successMsg").style.fontWeight = "bold";
+
+    setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+    }, 800);
+});
+</script>
+
+</body>
+</html>
